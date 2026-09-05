@@ -19,9 +19,6 @@ All theme parameters are set under `[params]` in your site config. Every paramet
   # Can also be set per-page via frontmatter
   BookToC = true
 
-  # Path to favicon file relative to 'static' directory
-  BookFavicon = 'favicon.png'
-
   # Path to logo image file relative to 'static' directory
   BookLogo = 'logo.png'
 
@@ -82,6 +79,18 @@ Full-text search is enabled by default using [MiniSearch](https://lucaong.github
 To exclude a page from the search index, set `bookSearchExclude: true` in its frontmatter.
 
 If search is not working, verify that `baseURL` in your config matches the URL where the site is hosted. A mismatch prevents the search index from loading.
+
+## Favicon
+
+The theme links these files from the `static` directory:
+
+- `favicon.svg`: modern browsers
+- `favicon.png`: fallback for browsers without SVG favicon support
+- `apple-touch-icon.png`: iOS home screen icon
+
+To use your own favicon, place files with the same names in your project's `static` directory. They take precedence over the theme's files.
+
+To use different file names or formats, override `layouts/_partials/docs/html-head-favicon.html` in your project.
 
 ## Hugo Site Configuration
 
