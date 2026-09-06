@@ -169,8 +169,8 @@
   /* {{< image >}} */
   .book-image {
     input + img {
+      border: var(--space-1) solid var(--gray-200);
       cursor: zoom-in;
-      transition: transform 0.2s ease-in-out;
     }
 
     input:checked + img {
